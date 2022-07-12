@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            transition: 5s;
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            background-color: chartreuse;
+            border: 2px groove black;
+        }
+        #tra:hover{
+            -webkit-transform: translate(30px,20px);
+            -moz-transform: translate(30px,20px);
+            -ms-transform: translate(30px,20px);
+            -o-transform: translate(30px,20px);
+            transform: translate(30px,20px);
+            background-color: red;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #rot:hover{
+            -webkit-transform: rotate(360deg);
+            -moz-transform:  rotate(360deg);
+            -ms-transform:  rotate(360deg);
+            -o-transform:  rotate(360deg);
+            transform: rotate(360deg);
+            background-color: red;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #rot3d:hover{
+            -webkit-transform:  rotate3d(1,1,0,360deg);
+            -moz-transform:  rotate3d(1,1,0,360deg);
+            -ms-transform:  rotate3d(1,1,0,360deg);
+            -o-transform:  rotate3d(1,1,0,360deg);
+            transform: rotate3d(1,1,0,360deg);
+            background-color: red;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #ske:hover{
+            -webkit-transform: skew(30deg);
+            -moz-transform: skew(30deg);
+            -ms-transform: skew(30deg);
+            -o-transform: skew(30deg);
+            transform: skew(30deg);
+            background-color: red;
+            margin-left: 100px;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sca:hover{
+            -webkit-transform: scale(0.2,0.4);
+            -moz-transform: scale(0.2,0.4);
+            -ms-transform: scale(0.2,0.4);
+            -o-transform: scale(0.2,0.4);
+            transform: scale(0.2,0.4);
+            background-color: red;
+            margin-left: 100px;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #opa:hover{
+            opacity: 0.15;
+            background-color: red;
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #rgba:hover{
+            background-color: rgba(134, 140, 100, 0.7);
+            color: chartreuse;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #bosh:hover{
+            box-shadow: 2px 5px 8px blue;
+            color: chartreuse;
+            background-color: red;
+            font-size: 30px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #tesh:hover{
+            text-shadow: 3px 3px 3px rgb(25, 25, 224);
+            color: rgb(186, 215, 156);
+            background-color: red;
+            font-size: 30px;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #bora:hover{
+            border-radius: 50%;
+            background-color: red;
+            color: chartreuse;
+        }
+        #ovfl:hover{
+            overflow: hidden;
+        }
+    </style>     
+</head>
+<body>
+    <div id="tra">Translate</div><hr>
+    <div id="rot">Rotate</div><hr>
+    <div id="rot3d">Rotate3D</div><hr>
+    <div id="ske">Skew</div><hr>
+    <div id="sca">Scale</div><hr>
+    <div id="opa">Opascity</div><hr>
+    <div id="rgba">RGBA</div><hr>
+    <div id="bosh">BoxShadow</div><hr>
+    <div id="tesh">TextShadow</div><hr>
+    <div id="bora">Border-Radius</div><hr>
+    <div id="ovfl">Overflow Overflow Overflow Overflow Overflow Overflow Overflow OverflowOverflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow Overflow</div>
+</body>
+</html>

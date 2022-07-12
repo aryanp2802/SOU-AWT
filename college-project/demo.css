@@ -1,0 +1,35 @@
+.cls{
+    background-color: red;
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.cls1{
+    background-color: rgb(225, 49, 49);
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.cls2{
+    background-color: rgb(217, 65, 65);
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.cls3{
+    background-color: rgb(213, 77, 77);
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.cls4{
+    background-color: rgb(199, 92, 92);
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}

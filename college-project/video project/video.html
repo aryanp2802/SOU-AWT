@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video animation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .bg{
+            position: fixed;
+            margin-top: 2%;
+            margin-left: 30%;
+            z-index: 1;
+        }
+        .vid{
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            /* right: 0;
+            left: 0; */
+            width: auto;
+            height: 100vh;
+            background-size: cover;
+        }
+        h2{
+            color: blue;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            text-shadow: 3px 3px 3px red;
+
+        }
+    </style>
+</head>
+<body><div><video src="akp2.mp4" muted loop autoplay class="vid"></video></div>
+    
+    <div class="bg">
+        <h2>PEACE AND READING </h2>
+    </div>
+    
+</body>
+</html>

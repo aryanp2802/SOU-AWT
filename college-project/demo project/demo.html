@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Web site</title>
+    <style>
+
+    body{
+        margin: auto;
+    }
+
+        ul{
+            background-color: blueviolet;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            /* display:flex; */
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+        }
+        .image{
+            display:block;
+            height: 700px;
+            width: 100%;
+        }
+        li:hover{
+            cursor: pointer;
+            color: black;
+            text-decoration: underline;
+
+        }
+        ul li{
+            display: inline-block;
+        }
+        ul li:hover ul{
+            display: block;
+        }
+        ul li ul{
+            display: none;
+            position: absolute;
+        }
+        ul li ul li{
+            display: block !important;
+        }
+        ul li ul li a:hover{
+            background-color:black;
+        }
+        .search{
+            padding: 8px 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><i class="fa fa-home"></i>Home</li>
+        <li><i class="fa fa-gear"></i>Services</li>
+        <li><i class="fa fa-user"></i>About</li>
+        <li><i class="fa fa-phone"></i>Contect us
+        <ul>
+            <li>contact</li>
+            <li>whatsapp</li>
+            <li>Email us</li>
+        </ul>
+        </li>
+        <li>Admission
+            <ul>
+                <li>Form</li>
+                <li>Details</li>
+            </ul>       
+        </li>
+        <input style="float: right;" class="search" type="text" placeholder="Search here...">
+        <button style="float: right;" class="search" type="submit"><i class="fa fa-search"></i></button>
+    </ul>
+    <img src="bg1 (3).jpg" class="image">
+</body>
+
+</html>

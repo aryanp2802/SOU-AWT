@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Property</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        #mainul li ul li{
+            display: none;
+        }
+
+        #mainul li:hover ul li{
+            display: block;
+        }
+
+        #mainul li:hover ul li ul li {
+            display: none;
+        }
+
+        #mainul li ul li:hover ul li {
+            display: block;
+        }
+
+        #mainul li ul li:hover ul li ul li {
+            display: none;
+        }
+
+        #mainul li ul li ul li:hover ul li {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="mainul">
+        <li>Google <i class="fa fa-google" style="font-size:12px; border: 1px solid red;"></i>
+            <ul>
+                <li>Gmail
+                    <ul>
+                        <li>Sign Up</li>
+                        <li>Sign In
+                            <ul>
+                                <li>Sing in as a developer</li>
+                                <li>Sign in as a Student</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Youtube <i class="fa fa-youtube-square" style="font-size:15px; border:1px solid red"></i></li>
+                <li>Gmap <i class="material-icons" style="font-size:12px; border:1px solid red">place</i></li>
+                <li>Yahoo <i class="fa fa-yahoo" style="font-size:12px; border:1px solid red"></i></i></li>
+            </ul>
+        </li>
+        <li>Amazon <i class="fa fa-amazon" style="font-size:12px; border: 1px solid red;"></i>
+            <ul>
+                <li>Payment Mode
+                    <ul>
+                        <li>Cash on delivery</li>
+                        <li>UPI Payment
+                            <ul>
+                                <li>Paytm</li>
+                                <li>Gpay</li>
+                                <li>Phone pay</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>delivery</li>
+                <li>Add to cart</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

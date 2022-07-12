@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        form{
+            background-color: burlywood;
+            /* box-sizing: border-box; */
+            /* width: 100%; */
+        }
+        h2{
+            text-align: center;
+            /* font-weight: 100; */
+            font-size: 2em;
+        }
+        .int{
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: oblique;
+        }
+        
+        #btn{
+            background-color: rgb(216, 240, 240);
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 70px;
+            text-align: center;
+            margin: 5px 14px;
+            padding: 7px 8px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        #btn:hover{
+            background-color: cyan;
+            box-shadow: 0px 5px 40px 0px rgba(0,0,0,25),0px 8px 80px 0px rgba(0,0,0,16);
+            font-style: italic;
+        }
+        #res{
+            background-color: rgb(244, 170, 170);
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 70px;
+            text-align: center;
+            margin: 5px 14px;
+            padding: 7px 8px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+        #res:hover{
+            background-color: rgb(240, 127, 127);
+            box-shadow: 0px 5px 40px 0px rgba(0,0,0,25),0px 8px 80px 0px rgba(0,0,0,16);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 3px solid black; display:inline-flex;">
+        <form>    
+        <h2>Admission form</h2>
+        <label class="int"> Firstname: </label>           
+        <input type="text" name="firstname" size="15"/> <br> <br>   
+        <label class="int"> Lastname: </label>           
+        <input type="text" name="lastname" size="15"/> <br> <br> 
+        <label class="int">Date of Birth</label>   
+        <input type="date"/><br><br>
+        <labe class="int"l>Select Your Age</label>   
+        <input type="range" min="17"/><br><br>
+        <label class="int">     
+        Course :    
+        </label>     
+        <select>    
+        <option value="Course">Course</option>    
+        <option value="BCA">BCA</option>    
+        <option value="BBA">BBA</option>    
+        <option value="B.Tech">B.Tech</option>    
+        <option value="MBA">MBA</option>    
+        <option value="MCA">MCA</option>    
+        <option value="M.Tech">M.Tech</option>    
+        <option value="BSC">BSC</option>    
+        <option value="MSC">MSC</option>    
+        </select>    
+        <br>    
+        <br>    
+        <label class="int">     
+        Gender :    
+        </label><br>    
+        <input type="radio" name="gender"/> Male <br>    
+        <input type="radio" name="gender"/> Female <br>    
+        <input type="radio" name="gender"/> Other    
+        <br>    
+        <br>    
+        <label class="int">  
+        Hobbies:  
+        </label>    
+        <br>    
+        <input type="checkbox" name="Programming"> Programming <br>    
+        <input type="checkbox" name="Cricket"> Cricket <br>    
+        <input type="checkbox" name="Football"> Football  <br>   
+        <input type="checkbox" name="Football"> Swamming  <br>   
+        <input type="checkbox" name="reading Novel"> Reading Novel  <br>   
+        <br>    
+        <br>   
+        <label class="int">     
+        Phone :    
+        </label>      
+        <input type="text" name="phone" size="10"> <br> <br>    
+        <label class="int">Address:</label>        
+        <textarea cols="80" rows="5" value="address">    
+        </textarea>    
+        <br> <br> 
+        <label class="int">Upload&nbsp;&nbsp;your&nbsp;&nbsp;12th&nbsp;&nbsp;marksheet&nbsp;&nbsp;here:</label>   
+        <input type="file" multiple accept=".jpg.png"/><br><br>
+        <label class="int">Email:</label>    
+        <input type="email" id="email" name="email"> <br>      
+        <br> <br>    
+        <label class="int">Password:</label>    
+        <input type="Password" id="pass" name="pass"> <br>     
+        <br> <br> 
+        <button id="btn"><a href="tags.html">Submit</a></button>   
+        <button id="res">Reset</button>  
+        </form>  
+    </div>  
+</body>
+</html>
