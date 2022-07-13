@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+
+
+    <title>Theme change</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 10px;
+        }
+        .dark{
+            background-color: black;
+        }
+        button{
+            all: none;
+            padding: 10px 15px;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="bx">
+    </div>
+    <button id="D1">Change</button>
+    <input type="color" name="" id="cp" onchange="bodycolor()">
+    <button id="pr">color</button>
+    <button id="md"><i id="btn" class="fa-solid fa-moon"></i></button>
+
+    <script>
+
+        document.getElementById("md").addEventListener("click",()=>{
+            document.body.classList.toggle("dark")
+            document.getElementById("btn").classList.toggle("fa-sun")
+            document.getElementById("btn").classList.toggle("fa-moon")
+        })
+
+        document.getElementById("pr").addEventListener("click",()=>{
+            document.body.style.backgroundColor = prompt("Enter color")
+        })
+
+        let box = document.getElementById('bx')
+        function box1(){
+            if(box.style.backgroundColor != 'red'){
+                box.style.backgroundColor = "red";
+            }
+            else{
+                box.style.backgroundColor = "blue";
+            }
+        }
+
+        let btn = document.getElementById("D1")
+        btn.addEventListener("click",box1)
+
+        function bodycolor(){
+            let cp = document.getElementById("cp")
+            document.body.style.backgroundColor = cp.value
+        }
+        // document.getElementById("cp").addEventListener("onChange",()=>{document.body.style.backgroundColor=document.getElementById("cp").value})
+            </script>
+</body>
+</html>

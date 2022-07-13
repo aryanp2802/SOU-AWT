@@ -217,6 +217,18 @@ footer{
     text-align: center;
     font-size: 50px;
 }
+.dark{
+    background-color: rgb(81, 80, 80);
+}
+.white-font{
+    color: white;
+}
+#md{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
 @media(min-width:600px) and (max-device-width: 768px){
     .btn{
         /* background-color: khaki; */
