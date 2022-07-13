@@ -32,10 +32,14 @@
     height: 60px;
     margin: 3px 6px;
     border-radius: 40%;
+    transition: transform 0.5s ease;
+}
+#logo img:hover{
+    transform: rotate(360deg);
 }
 #navbar ul{
     display: flex;
-    margin-left: 7em;
+    margin-left: 8em;
     /* padding-left: 12rem; */
     justify-content: center;
 }
@@ -138,7 +142,7 @@
 
 .btn{
     border: 2px solid white;
-    background-color: darkgray;
+    background-color: transparent;
     border-radius: 10px;
     color: white;
     cursor: pointer;
@@ -150,8 +154,8 @@
     /* opacity: 0.7; */
 }
 .btn:hover{
-    color: white ;
-    background-color: dimgray;
+    color: lightgrey ;
+    /* background-color: dimgray; */
     transform: scale(1.125);
 }
 
@@ -215,23 +219,25 @@ footer{
 }
 @media(min-width:600px) and (max-device-width: 768px){
     .btn{
-        background-color: khaki;
+        /* background-color: khaki; */
+        color: lightpink;
     }
     .btn:hover{
-        background-color: darkkhaki;
+        background-color: transparent;
     }
 }
 @media(min-width:769px) and (max-device-width: 1000px){
     .btn{
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
+        color: lightgreen;
     }
     .btn:hover{
-        background-color: aqua;
+        background-color: transparent;
     }
 }
 @media(min-width:600px) and (max-device-width: 768px){
     #home p{
-        font-size: 1em;
+        font-size: 1.6em;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
         font-style: italic;
         text-shadow: 1px 1px white;
@@ -240,10 +246,10 @@ footer{
 @media(min-width:769px) and (max-device-width: 1000px){
     #home p{
         font-size: 1.5em;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-        font-weight: bold;
-        text-decoration: underline;
-        color: cadetblue;
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+        /* text-decoration: underline; */
+        color: rgb(210, 222, 222);
     }
 }
 @media(min-width:600px) and (max-device-width: 768px){
