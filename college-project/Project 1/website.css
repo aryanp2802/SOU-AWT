@@ -114,7 +114,7 @@
     transition: transform 1s ease;
 }
 .container .row .col img:hover{
-    transform: rotate(360deg);
+    transform: rotate3d(1,1,1,360deg);
 }
 #container .row p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
