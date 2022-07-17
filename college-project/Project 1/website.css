@@ -111,6 +111,10 @@
     border-radius: 50px;
     margin: auto;
     display: block;
+    transition: transform 1s ease;
+}
+.container .row .col img:hover{
+    transform: rotate(360deg);
 }
 #container .row p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -233,4 +237,25 @@ footer{
         text-decoration: underline;
         color: cadetblue;
     }
+}
+#hide{
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+#hide1{
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
+#hide2{
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
 }

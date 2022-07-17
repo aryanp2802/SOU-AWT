@@ -75,40 +75,43 @@
             <div class="col text-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col ">
+                        <div class="col">
                             <img src="bg1.jpg" alt="" class="col text-center">
                             <h2>
                                 <p class="text">Healthy and Fresh Food</p>
                             </h2>
-                            <p class="center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla itaque,
+                            <p class="center" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla itaque,
                                 officiis
                                 pariatur consequatur voluptate ad quam, tenetur ducimus atque quos unde deleniti
                                 obcaecati
                                 aliquam
                                 in magnam beatae incidunt nobis reiciendis. Cupiditate, officiis earum. Quas?</p>
+                                <button id="hide">hide</button>
                         </div>
                         <div class="col">
                             <img src="bg2.jpg" alt="" class="col text-center">
                             <h2 class="center">
                                 <p class="text">Bulk Ordering</p>
                             </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui tempore
+                            <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima qui tempore
                                 recusandae ipsum
                                 eveniet
                                 placeat provident dolor ullam beatae accusantium reiciendis culpa ratione,
                                 cupiditate facilis
                                 harum
                                 dolorem commodi in explicabo suscipit soluta voluptatem inventore!</p>
+                                <button id="hide1">hide</button>
                         </div>
                         <div class="col">
                             <img src="bg6.jpg" alt="" class="col text-center">
                             <h2 class="center">Food delivery</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis magnam
+                            <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis magnam
                                 molestias rerum
                                 excepturi quaerat nulla exercitationem suscipit optio deleniti dolorem aliquid porro
                                 totam
                                 delectus,
                                 ullam esse eum, eius ipsa a expedita corrupti sunt.</p>
+                                <button id="hide2">hide</button>
                         </div>
                     </div>
                 </div>
@@ -193,6 +196,39 @@
                 }
             })
         })
+
+        $(document).ready(()=>{
+            $("#hide").click(()=>{
+               if($("#hide").html() == "hide"){
+                $("#para").hide()
+                $("#hide").html("show")
+               }
+               else{
+                $("#para").show()
+                $("#hide").html("hide")
+               }
+            });
+            $("#hide1").click(()=>{
+               if($("#hide1").html() == "hide"){
+                $("#para1").hide()
+                $("#hide1").html("show")
+               }
+               else{
+                $("#para1").show()
+                $("#hide1").html("hide")
+               }
+            });
+            $("#hide2").click(()=>{
+               if($("#hide2").html() == "hide"){
+                $("#para2").hide()
+                $("#hide2").html("show")
+               }
+               else{
+                $("#para2").show()
+                $("#hide2").html("hide")
+               }
+            });
+        });
     </script>
 </body>
 
