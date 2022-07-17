@@ -244,6 +244,11 @@ footer{
     border-radius: 10px;
     width: 100px;
     height: 30px;
+    transition: transform 0.5s ease;
+}
+#hide:hover{
+    transform: scale(1.125);
+    color: darkslategray;
 }
 #hide1{
     border: 2px solid black;
@@ -251,6 +256,11 @@ footer{
     border-radius: 10px;
     width: 100px;
     height: 30px;
+    transition: transform 0.5s ease;
+}
+#hide1:hover{
+    transform: scale(1.125);
+    color: darkslategray;
 }
 #hide2{
     border: 2px solid black;
@@ -258,4 +268,9 @@ footer{
     border-radius: 10px;
     width: 100px;
     height: 30px;
+    transition: transform 0.5s ease;
+}
+#hide2:hover{
+    transform: scale(1.125);
+    color: darkslategray;
 }
