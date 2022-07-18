@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="website.css">
-    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head>
 
 <body>
-    
-    
+
+
     <div id="logo">
         <img src="logo.jpg" alt="">
         AryanOnlineMeal
@@ -46,9 +47,9 @@
         <!-- </div> -->
     </nav>
     <!-- </div> -->
-    
+
     <script>
-        document.getElementById("md").addEventListener("click",()=>{
+        document.getElementById("md").addEventListener("click", () => {
             document.body.classList.toggle("dark")
             document.getElementById("btn").classList.toggle("fa-sun")
             document.getElementById("btn").classList.toggle("fa-moon")
@@ -67,7 +68,7 @@
             </div>
         </div>
     </section>
-    <section id="ser" >
+    <section id="ser">
         <div class="col">
             <h1>
                 <p class="text col text-center" id="heading">Our Services</p>
@@ -80,13 +81,14 @@
                             <h2>
                                 <p class="text">Healthy and Fresh Food</p>
                             </h2>
-                            <p class="center" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla itaque,
+                            <p class="center" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+                                itaque,
                                 officiis
                                 pariatur consequatur voluptate ad quam, tenetur ducimus atque quos unde deleniti
                                 obcaecati
                                 aliquam
                                 in magnam beatae incidunt nobis reiciendis. Cupiditate, officiis earum. Quas?</p>
-                                <button id="hide">hide</button>
+                            <button id="hide">hide</button>
                         </div>
                         <div class="col">
                             <img src="bg2.jpg" alt="" class="col text-center">
@@ -100,18 +102,19 @@
                                 cupiditate facilis
                                 harum
                                 dolorem commodi in explicabo suscipit soluta voluptatem inventore!</p>
-                                <button id="hide1">hide</button>
+                            <button id="hide1">hide</button>
                         </div>
                         <div class="col">
                             <img src="bg6.jpg" alt="" class="col text-center">
                             <h2 class="center">Food delivery</h2>
-                            <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis magnam
+                            <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis
+                                magnam
                                 molestias rerum
                                 excepturi quaerat nulla exercitationem suscipit optio deleniti dolorem aliquid porro
                                 totam
                                 delectus,
                                 ullam esse eum, eius ipsa a expedita corrupti sunt.</p>
-                                <button id="hide2">hide</button>
+                            <button id="hide2">hide</button>
                         </div>
                     </div>
                 </div>
@@ -128,19 +131,20 @@
                         <input type="text" name="name" id="name" placeholder="Enter your name here..">
                     </div>
                     <div class="grp">
-                        <label for="email">Email us:</label>  <span id="error" style="color: red;"></span>
+                        <label for="email">Email us:</label> <span id="error" style="color: red;"></span>
                         <input type="email" name="name" id="email" placeholder="xyz@123.com..">
                     </div>
                     <div class="grp">
-                        <label for="Phone">Phone No:</label>
+                        <label for="Phone">Phone No:</label><span id="pherr" style="color: red;"></span>
                         <input type="phone" name="name" id="phone" placeholder="Enter your phone no. here..">
                     </div>
                     <div class="grp">
-                        <label for="message">Message:</label>
+                        <label for="message">Message:</label><span id="msgerr" style="color: red;"></span>
                         <textarea name="message" id="message" cols="30" rows="5" placeholder="type here.."></textarea>
                     </div>
                     <button class="btn" id="submit-now">submit</button>
                 </form>
+                
             </div>
         </div>
     </section>
@@ -162,6 +166,25 @@
 
 
     <script>
+
+        //Reg Ex Declaration - Globaly.
+        var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+        var $FullNameRegEx = /^([a-zA-Z ]{2,40})$/;
+        var $BankAccountNameRegEx = /^([a-zA-Z ]{2,60})$/;
+        var $PasswordRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+
+        var $EmailIdRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+        var $ConNoRegEx = /^([0-9]{10})$/;
+        var $AgeRegEx = /^([0-9]{1,2})$/;
+        var $AadhaarNoRegEx = /^([0-9]{12})$/;
+        var $GSTNoRegEx = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+        var $IndianDrivingLicenseNoRegEx = /^([A-Z]{2,3}[-/0-9]{8,13})$/;
+        var $IndianVehicleRegNoRegEx = /^([A-Z]{2}[0-9]{1,2}[A-Z]{1,3}[0-9]{1,4})$/;
+        var $PincodeRegEx = /^[1-9][0-9]{5,6}$/;
+        var $PANNoRegEx = /^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$/;
+        var $IFSCCodeRegEx = /^[A-Za-z]{4}0[A-Z0-9a-z]{6}$/;
+        var $BankAccountNoRegEx = /^([0-9]{9,18})$/;
+        var $LatitudeLongitude = /^(-?(?:1[0-7]|[1-9])?\d(?:\.\d{1,8})?|180(?:\.0{1,8})?)$/;
         alert('Welcome');
 
         let order_btn = document.getElementById("Order-now")
@@ -175,58 +198,84 @@
             }
         })
 
-        let submit_btn = document.getElementById("submit-now")
-        submit_btn.addEventListener("click", () => {
-            prompt('Enter OTP')})
+        // let submit_btn = document.getElementById("submit-now")
+        // submit_btn.addEventListener("click", () => {
+        //     prompt('Enter OTP')
+        // })
 
-        $(document).ready(() =>{
-            $("#email").blur(()=>{
-                if (!$("#email").val().includes("@gmail.com")) {
-                    $("#error").text("Invalid Input")
-                    
+         
+
+        $(document).ready(() => {
+            $("#email").blur(() =>{
+                if (!$("#email").val().match($EmailIdRegEx) || $("#email").val() == '' || $("#email").val() == null) {
+                    $("#error").text("Invalid Email")
+
                 } else {
                     $("#error").text("")
                 }
             })
-            $("#name").blur(() => {
-                if (!$("#name").val()) {
-                    $("#txtname").text("Can't be empty")
+            $("#name").blur(() =>{
+                if (!$("#name").val().match($FullNameRegEx) || $("#name").val() == '' || $("#name").val() == null) {
+                    $("#txtname").text("Invalid name")
                 } else {
-                    $("#txtname").text("")
+                    $("#txtname").text(" ")
+                }
+            })
+            $("#phone").blur(() =>{
+                if (!$("#phone").val().match($ConNoRegEx) || $("#phone").val() == '' || $("#phone").val() == null) {
+                    $("#pherr").text("Invalid phone no.")
+                } else {
+                    $("#pherr").text("")
+                }
+            })
+            $("#message").blur(() => {
+                if (!$("#message").val() || $("#message").val() == '' || $("#message").val() == null) {
+                    $("#msgerr").text("Can't be empty")
+                } else {
+                    $("#msgerr").text("")
+                }
+            })
+
+            $("#submit-now").click((event)=>{
+                if(!$("#email").val().match($EmailIdRegEx) || !$("#name").val().match($FullNameRegEx) || !$("#phone").val().match($ConNoRegEx) || !$("#message").val() || $("#email").val() == '' || $("#email").val() == null || $("#name").val() == '' || $("#name").val() == null || $("#phone").val() == '' || $("#phone").val() == null || $("#message").val() == '' || $("#message").val() == null){
+                    event.preventDefault();
+                    window.history.back();
+                    alert('Please fill up all the details!!')
                 }
             })
         })
+                    
 
-        $(document).ready(()=>{
-            $("#hide").click(()=>{
-               if($("#hide").html() == "hide"){
-                $("#para").hide()
-                $("#hide").html("show")
-               }
-               else{
-                $("#para").show()
-                $("#hide").html("hide")
-               }
+        $(document).ready(() => {
+            $("#hide").click(() => {
+                if ($("#hide").html() == "hide") {
+                    $("#para").hide()
+                    $("#hide").html("show")
+                }
+                else {
+                    $("#para").show()
+                    $("#hide").html("hide")
+                }
             });
-            $("#hide1").click(()=>{
-               if($("#hide1").html() == "hide"){
-                $("#para1").hide()
-                $("#hide1").html("show")
-               }
-               else{
-                $("#para1").show()
-                $("#hide1").html("hide")
-               }
+            $("#hide1").click(() => {
+                if ($("#hide1").html() == "hide") {
+                    $("#para1").hide()
+                    $("#hide1").html("show")
+                }
+                else {
+                    $("#para1").show()
+                    $("#hide1").html("hide")
+                }
             });
-            $("#hide2").click(()=>{
-               if($("#hide2").html() == "hide"){
-                $("#para2").hide()
-                $("#hide2").html("show")
-               }
-               else{
-                $("#para2").show()
-                $("#hide2").html("hide")
-               }
+            $("#hide2").click(() => {
+                if ($("#hide2").html() == "hide") {
+                    $("#para2").hide()
+                    $("#hide2").html("show")
+                }
+                else {
+                    $("#para2").show()
+                    $("#hide2").html("hide")
+                }
             });
         });
     </script>
