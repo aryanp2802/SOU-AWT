@@ -36,7 +36,10 @@
             b_contact = false
             b_name = false
             b_password = false
-
+            b_bankaccname = false
+            b_aadharno = false
+            b_GST = false
+            b_pincode = false
 
         $(document).ready(() => {
 
@@ -90,9 +93,49 @@
                     b_age = true
                 }
             })
+            
+            $("#ban").blur(function() {
+                if (!$(this).val().match($BankAccountNameRegEx) || $(this).val() == '' || $(this).val() == null) {
+                    $("#ban1").text("Invalid name")
+                    b_bankaccname = false
+                } else {
+                    $("#ban1").text(" ")
+                    b_bankaccname = true
+                }
+            })
+            
+            $("#acn").blur(function() {
+                if (!$(this).val().match($AadhaarNoRegEx) || $(this).val() == '' || $(this).val() == null) {
+                    $("#acn1").text("Invalid no")
+                    b_aadharno = false
+                } else {
+                    $("#acn1").text(" ")
+                    b_aadharno = true
+                }
+            })
+            
+            $("#gst").blur(function() {
+                if (!$(this).val().match($GSTNoRegEx) || $(this).val() == '' || $(this).val() == null) {
+                    $("#gst1").text("Invalid no")
+                    b_GST = false
+                } else {
+                    $("#gst1").text(" ")
+                    b_GST = true
+                }
+            })
+            
+            $("#pin").blur(function() {
+                if (!$(this).val().match($PincodeRegEx) || $(this).val() == '' || $(this).val() == null) {
+                    $("#pin1").text("Invalid no")
+                    b_pincode = false
+                } else {
+                    $("#pin1").text(" ")
+                    b_pincode = true
+                }
+            })
 
             $("#submit").click(function(e) {
-                if (!(b_age && b_email && b_contact && b_name && b_password)) {
+                if (!(b_age && b_email && b_contact && b_name && b_password && b_bankaccname && b_aadharno && b_GST && b_pincode)) {
                     e.preventDefault();
                     window.history.back();
                     alert("fill up all details")
@@ -130,7 +173,23 @@
             
             Age <br>
             >>> <input type="text" id="age">
-            <span id="errage"></span> <br> <br>
+            <span id="errage"></span> <br> 
+            
+            Bank account Name <br>
+            >>> <input type="text" id="ban">
+            <span id="ban1"></span> <br> 
+            
+            Aadhar card no. <br>
+            >>> <input type="text" id="acn">
+            <span id="acn1"></span> <br> 
+            
+            GST no. <br>
+            >>> <input type="text" id="gst">
+            <span id="gst1"></span> <br>
+
+            Pincode <br>
+            >>>  <input type="text" id="pin">
+            <span id="pin1"></span> <br> <br>
 
             <input type="submit" id="submit" value="Submit">
             
