@@ -1,0 +1,193 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>webpage</title>
+    <style>
+        .container {
+            height: 100px;
+            width: 100px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            border: 2px solid black;
+        }
+
+        .bg {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+        }
+
+        #bg1 {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="cross.gif" id="imgg1" class="cros"  alt="" height="50px" width="50px">
+    <img src="cross.gif" id="imgg2" class="cros"  alt="" height="50px" width="50px">
+    <img src="cross.gif" id="imgg3" class="cros"  alt="" height="50px" width="50px">
+    <img src="cross.gif" id="imgg4" class="cros"  alt="" height="50px" width="50px">
+    <img src="cross.gif" id="imgg5" class="cros"  alt="" height="50px" width="50px"><br>
+
+    <div class="container" id="box1"></div>
+    <div class="container" id="box2"></div>
+    <div class="container" id="box3"></div><br>
+    <div class="container" id="box4"></div>
+    <div class="container" id="box5"></div>
+    <div class="container" id="box6"></div><br>
+    <div class="container" id="box7"></div>
+    <div class="container" id="box8"></div>
+    <div class="container" id="box9"></div><br>
+
+    <img src="circle.png" id="img1" class="circ" alt="" height="50px" width="50px">
+    <img src="circle.png" id="img2" class="circ" alt="" height="50px" width="50px">
+    <img src="circle.png" id="img3" class="circ" alt="" height="50px" width="50px">
+    <img src="circle.png" id="img4" class="circ" alt="" height="50px" width="50px">
+    <img src="circle.png" id="img5" class="circ" alt="" height="50px" width="50px">
+
+    <script>
+        $(document).ready(() => {
+
+          
+            $(".cros").draggable();
+            $("#box1").droppable({
+                accept: ".cros",
+                drop: function (event, ui) {
+                    $(this).addId("bg1")
+                }
+            })
+            // $("#imgg1").draggable();
+            // $("#box2").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box3").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box4").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box5").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box6").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box7").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box8").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            // $("#imgg1").draggable();
+            // $("#box9").droppable({
+            //     accept: "#imgg1",
+            //     drop: function (event, ui) {
+            //         $(this).addClass("bg")
+            //     }
+            // })
+            $("#img1").draggable();
+            $("#box1").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box2").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box3").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box4").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box5").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box6").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box7").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box8").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+            $("#img1").draggable();
+            $("#box9").droppable({
+                accept: "#img1",
+                drop: function (event, ui) {
+                    $(this).addClass("bg")
+                }
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

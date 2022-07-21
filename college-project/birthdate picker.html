@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Birthdate</title>
+</head>
+<body>
+    <label for="">Birth Date:</label>
+    <input type="text" id="d1" placeholder="Select Date"><br><hr>
+    <label for="">Birth Date:</label>
+    <input type="text" id="d2" placeholder="Select Date">
+    <script>
+        $(document).ready(()=>{
+            $("#d1").datepicker({
+                showWeek: true,
+                yearSuffix:"(DOB)",
+                showAnim: "slide"
+            })
+            $("#d2").datepicker()
+            $("#d2").datepicker("show")
+        });
+    </script>
+</body>
+</html>

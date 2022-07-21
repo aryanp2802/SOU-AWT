@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Dialoge</title>
+</head>
+<body>
+    <input type="button" value="Click Here...." id="btn" >
+    <div id="d1" title="hello">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugit inventore quae.</p>
+    </div>
+
+    <script>
+        $(document).ready(()=>{
+            $("#d1").dialog({
+                autoOpen:true,
+            })
+            $("#btn").click(()=>{
+                $("#d1").dialog()
+            })
+        })
+    </script>
+</body>
+</html>

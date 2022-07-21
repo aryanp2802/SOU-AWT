@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#v").slider({
+                orientation: "horizontal",
+                min: 18,
+                max: 100,
+                value: 18,
+                slide: function (event, ui) {
+                    $("#d").val(ui.value);
+                }
+            });
+            $("#d").val($("#v").slider("value"));
+
+
+            $("#k").slider({
+                range: true,
+                min: 0,
+                max: 5000,
+                values: [0, 1000],
+                slide: function (event, ui) {
+                    $("#g").val("$" + ui.values[0] + ' - $' + ui.values[1]);
+                },
+                start: function (event, ui) {
+                    $("#h").val("$" + ui.values[0]);
+                },
+                stop: function (event, ui) {
+                    $("#i").val("$" + ui.values[1]);
+                },
+                change: function (event, ui) {
+                    $("#j").val("$" + ui.values[0] + ' - $' + ui.values[1]);
+                },
+            });
+
+            $("#g").val(
+                "$" + $("#k").slider("values", 0) + " - " +
+                "$" + $("#k").slider("values", 1));
+            $("#h").val(
+                "$" + $("#k").slider("values", 0));
+            $("#i").val(
+                "$" + $("#k").slider("values", 1));
+            $("#j").val(
+                "$" + $("#k").slider("values", 0) + " - " +
+                "$" + $("#k").slider("values", 1));
+
+
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+    <label>Enter Your Age: </label>
+    <input type="text" id="d" style="border:0; color:red; font-weight:bold;"> <br><br>
+
+    <div id="v" style="width: 300px;">
+
+    </div>
+    <br><br>
+    <div id="k" style="width: 300px;"></div><br>
+    <label for="">Price range:</label>
+    <input type="text" id="g" readonly
+        style="background-color: rgb(243, 236, 236);color: red; font-weight: bold;"><br><br>
+    <label for="">Start range:</label>
+    <input type="text" id="h" readonly
+        style="background-color: rgb(243, 236, 236);color: red; font-weight: bold;"><br><br>
+    <label for="">Stop range:</label>
+    <input type="text" id="i" readonly
+        style="background-color: rgb(243, 236, 236);color: red; font-weight: bold;"><br><br>
+    <label for="">Change range:</label>
+    <input type="text" id="j" readonly
+        style="background-color: rgb(243, 236, 236);color: red; font-weight: bold;"><br><br>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Sortable</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .d{
+            height: 40px;
+            width: 100%;
+            background-color: burlywood;
+            list-style: none;
+            margin-top: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>List 1</h1>
+        <ul id="sort1">
+            <li class="d">A</li>
+            <li class="d">B</li>
+            <li class="d">C</li>
+            <li class="d">D</li>
+        </ul>
+    </div>
+    
+    <div>
+        <h1>List 2</h1>
+        <ul id="sort2">
+            <li class="d">a</li>
+            <li class="d">b</li>
+            <li class="d">c</li>
+            <li class="d">d</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(()=>{
+            $("#sort1").sortable();
+            $("#sort2").sortable();
+            $("#sort1").sortable({
+                connectWith:"#sort2"
+            });
+            $("#sort2").sortable({
+                connectWith:"#sort1"
+            });
+
+        })
+    </script>
+</body>
+</html>
