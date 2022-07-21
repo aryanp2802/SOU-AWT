@@ -12,7 +12,7 @@
         $(document).ready(function () {
             $("#star").rating('create',
                 {
-                    coloron: 'yellow',
+                    // coloron: 'yellow',
                     onClick: function () {
                         alert('rating is ' + this.attr('data-rating'));
 
@@ -20,6 +20,17 @@
                 });
         });
     </script>
+
+    <style>
+        *{
+            font-size: 30px;
+            text-align: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -30,9 +41,9 @@
     <div>
         <table>
             <tr>
-                <td>Default stars:
-                
-                </td>
+                <td>Default stars:</td>
+                </tr>
+                <tr>
                 <td>
                     <div id="star">
                         <input type="hidden" value="1" name="rating" />
