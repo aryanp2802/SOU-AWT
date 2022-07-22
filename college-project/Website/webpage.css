@@ -1,0 +1,19 @@
+#side{
+    float: left;
+    
+}
+#main{
+    float: left;
+    margin-left: 5%;
+    height: 300px;
+    width: 60%;
+}
+#side1{
+    float: left;
+}
+#main1{
+    float: left;
+    margin-left: 5%;
+    height: 300px;
+    width: 60%;
+}
