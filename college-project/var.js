@@ -45,3 +45,5 @@ var car = [
 
 console.log(car.indexOf("Ford"), car.indexOf("Mustang"), car.indexOf("doors"));
 
+
+
